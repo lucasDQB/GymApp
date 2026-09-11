@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>My App</title>
+
+  <!-- PWA setup -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1e2622" />
+
+  <!-- iOS-specific tags: these are what make "Add to Home Screen" behave like an app -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="My App" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+    <header class="app-header">
+      <h1>My App</h1>
+      <p class="app-header__meta">Runs offline. Saved on this device only.</p>
+    </header>
+
+    <form id="entry-form" class="entry-form">
+      <input
+        id="entry-input"
+        type="text"
+        placeholder="Add something"
+        autocomplete="off"
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="entry-list" class="entry-list"></ul>
+
+    <p id="empty-state" class="empty-state">Nothing here yet. Add your first item above.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
